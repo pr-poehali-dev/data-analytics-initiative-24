@@ -5,22 +5,22 @@ import { ArrowRight } from "lucide-react"
 export function BlogSection() {
   const blogPosts = [
     {
-      title: "Создание современных UI с PixelForge",
-      description: "Узнайте, как создавать красивые интерфейсы с нашей библиотекой компонентов.",
-      date: "15 мая 2023",
-      readTime: "5 мин",
-    },
-    {
-      title: "Мощь Tailwind CSS и React",
-      description: "Как Tailwind CSS и React могут преобразить ваш рабочий процесс разработки.",
-      date: "28 апреля 2023",
-      readTime: "7 мин",
-    },
-    {
-      title: "Доступные компоненты",
-      description: "Лучшие практики создания UI-компонентов, доступных для всех пользователей.",
-      date: "10 апреля 2023",
+      title: "Нормоконтроль без стресса: как автоматизация меняет работу проектных организаций",
+      description: "Разбираем, почему традиционный нормоконтроль тормозит проекты и как современные IT-инструменты решают эту проблему.",
+      date: "12 февраля 2026",
       readTime: "6 мин",
+    },
+    {
+      title: "ГОСТ, ЕСКД, СПДС: как не запутаться в стандартах и автоматизировать проверку",
+      description: "Обзор ключевых стандартов технической документации и принципы их автоматической проверки.",
+      date: "28 января 2026",
+      readTime: "8 мин",
+    },
+    {
+      title: "Кейс: внедрение автоматического нормоконтроля на промышленном предприятии за 2 недели",
+      description: "Реальный опыт внедрения — от аудита до первых результатов. Как удалось сократить цикл согласования в 3 раза.",
+      date: "10 января 2026",
+      readTime: "7 мин",
     },
   ]
 
@@ -30,9 +30,9 @@ export function BlogSection() {
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">Статьи</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">Блог</h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70">
-                Будьте в курсе наших новостей, туториалов и лучших практик.
+                Экспертные статьи об автоматизации документооборота, нормоконтроле и IT в промышленности.
               </p>
             </div>
           </div>

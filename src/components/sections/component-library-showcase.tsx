@@ -3,17 +3,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { AnimatedText } from "@/components/ui/animated-text"
 import { AnimatedGradientBorder } from "@/components/ui/animated-gradient-border"
-import { ImageCard } from "@/components/ui-library/cards/image-card"
 import { CtaCard } from "@/components/ui-library/cards/cta-card"
 import { ProgressCard } from "@/components/ui-library/cards/progress-card"
-import { GradientButton } from "@/components/ui-library/buttons/gradient-button"
-import { PrimaryButton, SecondaryButton, OutlineButton } from "@/components/ui-library/buttons/button-variants"
-import { MagneticButton } from "@/components/ui/magnetic-button"
-import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui-library/animations/scroll-animations"
-import { Sparkles, Zap, Layers, Palette, ArrowRight, CheckCircle, BookOpen, Lightbulb, Rocket } from "lucide-react"
+import { ScrollAnimation } from "@/components/ui-library/animations/scroll-animations"
+import { FileCheck, FileText, CheckCircle, Clock, Users, ArrowRight, Rocket, Lightbulb, Sparkles } from "lucide-react"
 
 export function ComponentLibraryShowcase() {
-  const [activeTab, setActiveTab] = useState("cards")
+  const [activeTab, setActiveTab] = useState("normokontrol")
 
   return (
     <section id="components" className="w-full py-12 md:py-24 lg:py-32 overflow-hidden">
@@ -22,13 +18,13 @@ export function ComponentLibraryShowcase() {
           <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
             <div className="space-y-4">
               <AnimatedText
-                text="Библиотека компонентов"
+                text="Наши продукты"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                 animation="slide"
               />
               <AnimatedText
-                text="Исследуйте нашу коллекцию красиво оформленных UI-компонентов"
+                text="Инструменты, которые уже сегодня избавят вашу компанию от рутины с документами"
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
@@ -49,237 +45,160 @@ export function ComponentLibraryShowcase() {
                   containerClassName="rounded-full"
                 >
                   <TabsList className="glassmorphic-tabs border-0">
-                    <TabsTrigger value="cards">Карточки</TabsTrigger>
-                    <TabsTrigger value="buttons">Кнопки</TabsTrigger>
-                    <TabsTrigger value="progress">Прогресс</TabsTrigger>
+                    <TabsTrigger value="normokontrol">Нормоконтроль</TabsTrigger>
+                    <TabsTrigger value="docflow">Документооборот</TabsTrigger>
+                    <TabsTrigger value="analytics">Аналитика</TabsTrigger>
                   </TabsList>
                 </AnimatedGradientBorder>
               </div>
 
               {/* Cards Tab */}
-              <TabsContent value="cards" className="space-y-12">
+              <TabsContent value="normokontrol" className="space-y-12">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-medium tracking-tight text-center">Карточки с изображениями</h3>
+                  <h3 className="text-2xl font-medium tracking-tight text-center">Автоматический нормоконтроль</h3>
                   <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-                    Универсальные карточки с изображениями и текстом для демонстрации контента, продуктов или функций
-                  </p>
-
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <ScrollAnimation type="slide" direction="up" delay={0.1}>
-                      <ImageCard
-                        imageSrc="/placeholder.svg?height=300&width=500&text=Design"
-                        imageAlt="Design System"
-                        title="Дизайн-система"
-                        description="Комплексная дизайн-система с единообразными компонентами и стилями для веб-приложений."
-                        tags={["Дизайн", "UI/UX"]}
-                        variant="default"
-                        className="border-glow-red"
-                      />
-                    </ScrollAnimation>
-
-                    <ScrollAnimation type="slide" direction="up" delay={0.2}>
-                      <ImageCard
-                        imageSrc="/placeholder.svg?height=300&width=500&text=Components"
-                        imageAlt="Component Library"
-                        title="Переиспользуемые компоненты"
-                        description="Разрабатывайте быстрее с нашей библиотекой готовых настраиваемых UI-компонентов."
-                        tags={["React", "TypeScript"]}
-                        variant="hover-zoom"
-                        className="border-glow-blue"
-                      />
-                    </ScrollAnimation>
-
-                    <ScrollAnimation type="slide" direction="up" delay={0.3}>
-                      <ImageCard
-                        imageSrc="/placeholder.svg?height=300&width=500&text=Animation"
-                        imageAlt="Animation Library"
-                        title="Плавные анимации"
-                        description="Оживите интерфейсы коллекцией производительных и доступных анимаций."
-                        tags={["Motion", "Интерактив"]}
-                        variant="hover-reveal"
-                        className="border-glow-purple"
-                      />
-                    </ScrollAnimation>
-                  </div>
-                </div>
-
-                <div className="space-y-4 pt-8">
-                  <h3 className="text-2xl font-medium tracking-tight text-center">CTA-карточки</h3>
-                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-                    Привлекающие внимание карточки для конверсии посетителей в клиентов
-                  </p>
-
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <ScrollAnimation type="slide" direction="up" delay={0.1}>
-                      <CtaCard
-                        title="Начните сегодня"
-                        description="Присоединяйтесь к тысячам разработчиков, создающих крутые интерфейсы."
-                        primaryAction={{ text: "Регистрация" }}
-                        secondaryAction={{ text: "Подробнее" }}
-                        variant="default"
-                        icon={<Rocket className="h-6 w-6" />}
-                        className="border-glow-green"
-                      />
-                    </ScrollAnimation>
-
-                    <ScrollAnimation type="slide" direction="up" delay={0.2}>
-                      <CtaCard
-                        title="Премиум-функции"
-                        description="Разблокируйте продвинутые компоненты с премиум-тарифом."
-                        primaryAction={{ text: "Улучшить" }}
-                        variant="gradient"
-                        alignment="center"
-                        buttonVariant="gradient"
-                        icon={<Sparkles className="h-6 w-6" />}
-                        className="border-glow-yellow"
-                      />
-                    </ScrollAnimation>
-
-                    <ScrollAnimation type="slide" direction="up" delay={0.3}>
-                      <CtaCard
-                        title="Нужна помощь?"
-                        description="Наша команда поддержки готова ответить на любые вопросы."
-                        primaryAction={{ text: "Поддержка" }}
-                        variant="glass"
-                        alignment="right"
-                        buttonVariant="magnetic"
-                        icon={<Lightbulb className="h-6 w-6" />}
-                        className="border-glow-orange"
-                      />
-                    </ScrollAnimation>
-                  </div>
-                </div>
-              </TabsContent>
-
-              {/* Buttons Tab */}
-              <TabsContent value="buttons" className="space-y-12">
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-medium tracking-tight text-center">Стили кнопок</h3>
-                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-                    Полная коллекция стилей кнопок для любых задач
-                  </p>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <ScrollAnimation type="slide" direction="left" delay={0.1}>
-                      <div className="p-6 rounded-xl border glassmorphic-card border-glow-red">
-                        <h4 className="text-lg font-medium mb-6">Основные и вторичные</h4>
-                        <div className="flex flex-wrap gap-6">
-                          <StaggerContainer>
-                            <StaggerItem>
-                              <PrimaryButton>Основная</PrimaryButton>
-                            </StaggerItem>
-                            <StaggerItem>
-                              <PrimaryButton leftIcon={<Zap className="h-4 w-4" />}>С иконкой</PrimaryButton>
-                            </StaggerItem>
-                            <StaggerItem>
-                              <SecondaryButton>Вторичная</SecondaryButton>
-                            </StaggerItem>
-                            <StaggerItem>
-                              <SecondaryButton rightIcon={<ArrowRight className="h-4 w-4" />}>
-                                Подробнее
-                              </SecondaryButton>
-                            </StaggerItem>
-                          </StaggerContainer>
-                        </div>
-                      </div>
-                    </ScrollAnimation>
-
-                    <ScrollAnimation type="slide" direction="right" delay={0.1}>
-                      <div className="p-6 rounded-xl border glassmorphic-card border-glow-blue">
-                        <h4 className="text-lg font-medium mb-6">Контурные и градиентные</h4>
-                        <div className="flex flex-wrap gap-6">
-                          <StaggerContainer>
-                            <StaggerItem>
-                              <OutlineButton>Контурная</OutlineButton>
-                            </StaggerItem>
-                            <StaggerItem>
-                              <OutlineButton leftIcon={<BookOpen className="h-4 w-4" />}>Документация</OutlineButton>
-                            </StaggerItem>
-                            <StaggerItem>
-                              <GradientButton>Градиент</GradientButton>
-                            </StaggerItem>
-                            <StaggerItem>
-                              <GradientButton gradientFrom="from-blue-500" gradientTo="to-purple-600" glowAmount={4}>
-                                Со свечением
-                              </GradientButton>
-                            </StaggerItem>
-                          </StaggerContainer>
-                        </div>
-                      </div>
-                    </ScrollAnimation>
-
-                    <ScrollAnimation type="slide" direction="up" delay={0.3}>
-                      <div className="p-6 rounded-xl border glassmorphic-card border-glow-purple">
-                        <h4 className="text-lg font-medium mb-6">Интерактивные кнопки</h4>
-                        <div className="flex flex-wrap gap-6">
-                          <StaggerContainer>
-                            <StaggerItem>
-                              <MagneticButton className="neumorphic-button-primary">
-                                <span className="px-6 py-2.5">Магнитная</span>
-                              </MagneticButton>
-                            </StaggerItem>
-                            <StaggerItem>
-                              <GradientButton borderWidth={2}>Контур-градиент</GradientButton>
-                            </StaggerItem>
-                          </StaggerContainer>
-                        </div>
-                      </div>
-                    </ScrollAnimation>
-
-                    <ScrollAnimation type="slide" direction="up" delay={0.4}>
-                      <div className="p-6 rounded-xl border glassmorphic-card border-glow-green">
-                        <h4 className="text-lg font-medium mb-6">Состояния и варианты</h4>
-                        <div className="flex flex-wrap gap-6">
-                          <StaggerContainer>
-                            <StaggerItem>
-                              <PrimaryButton isLoading loadingText="Загрузка...">
-                                Отправить
-                              </PrimaryButton>
-                            </StaggerItem>
-                            <StaggerItem>
-                              <SecondaryButton disabled>Отключена</SecondaryButton>
-                            </StaggerItem>
-                            <StaggerItem>
-                              <OutlineButton size="sm">Малая</OutlineButton>
-                            </StaggerItem>
-                            <StaggerItem>
-                              <PrimaryButton size="lg">Большая</PrimaryButton>
-                            </StaggerItem>
-                          </StaggerContainer>
-                        </div>
-                      </div>
-                    </ScrollAnimation>
-                  </div>
-                </div>
-              </TabsContent>
-
-              {/* Progress Tab */}
-              <TabsContent value="progress" className="space-y-12">
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-medium tracking-tight text-center">Карточки прогресса</h3>
-                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-                    Визуализируйте прогресс, статус выполнения и метрики с этими интерактивными карточками
+                    Система проверяет документы по всем требуемым стандартам — мгновенно и без ошибок
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <ScrollAnimation type="slide" direction="up" delay={0.1}>
                       <ProgressCard
-                        title="Выполнение проекта"
-                        description="Отслеживайте прогресс вашего проекта."
-                        progress={65}
-                        total={100}
-                        status="default"
-                        showPercentage
+                        title="Проверено документов сегодня"
+                        description="Нормоконтроль работает в автоматическом режиме"
+                        progress={247}
+                        total={247}
+                        status="success"
+                        showFraction
                         variant="default"
-                        icon={<Layers className="h-6 w-6" />}
+                        icon={<FileCheck className="h-6 w-6" />}
                         className="border-glow-red"
                       />
                     </ScrollAnimation>
 
                     <ScrollAnimation type="slide" direction="up" delay={0.2}>
                       <ProgressCard
-                        title="Статус загрузки"
-                        progress={80}
+                        title="Соответствие стандартам ГОСТ"
+                        description="Документация проходит актуальные нормы"
+                        progress={98}
+                        total={100}
+                        status="success"
+                        showPercentage
+                        variant="gradient"
+                        progressColor="bg-gradient-to-r from-red-500 to-red-700"
+                        icon={<CheckCircle className="h-6 w-6" />}
+                        className="border-glow-green"
+                      />
+                    </ScrollAnimation>
+
+                    <ScrollAnimation type="slide" direction="up" delay={0.3}>
+                      <ProgressCard
+                        title="Экономия времени команды"
+                        description="По сравнению с ручным нормоконтролем"
+                        progress={90}
+                        total={100}
+                        status="default"
+                        showPercentage
+                        variant="outlined"
+                        icon={<Clock className="h-6 w-6" />}
+                        className="border-glow-blue"
+                      />
+                    </ScrollAnimation>
+
+                    <ScrollAnimation type="slide" direction="up" delay={0.4}>
+                      <ProgressCard
+                        title="Документов в архиве"
+                        description="Надёжное хранение с историей изменений"
+                        progress={1840}
+                        total={2000}
+                        status="info"
+                        showFraction
+                        variant="glass"
+                        progressColor="bg-blue-500"
+                        icon={<FileText className="h-6 w-6" />}
+                        className="border-glow-purple"
+                      />
+                    </ScrollAnimation>
+                  </div>
+                </div>
+              </TabsContent>
+
+              {/* Docflow Tab */}
+              <TabsContent value="docflow" className="space-y-12">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-medium tracking-tight text-center">Умный документооборот</h3>
+                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+                    Автоматическое формирование, маршруты согласования и надёжный архив документов
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <ScrollAnimation type="slide" direction="up" delay={0.1}>
+                      <CtaCard
+                        title="Создание документов"
+                        description="Автоматическое формирование документов по шаблонам. Стандарты уже вшиты в систему."
+                        primaryAction={{ text: "Подробнее" }}
+                        variant="default"
+                        icon={<FileText className="h-6 w-6" />}
+                        className="border-glow-red"
+                      />
+                    </ScrollAnimation>
+
+                    <ScrollAnimation type="slide" direction="up" delay={0.2}>
+                      <CtaCard
+                        title="Маршруты согласования"
+                        description="Настройте цепочки согласования, уведомления и сроки — система сделает остальное."
+                        primaryAction={{ text: "Попробовать" }}
+                        variant="gradient"
+                        alignment="center"
+                        buttonVariant="gradient"
+                        icon={<Users className="h-6 w-6" />}
+                        className="border-glow-blue"
+                      />
+                    </ScrollAnimation>
+
+                    <ScrollAnimation type="slide" direction="up" delay={0.3}>
+                      <CtaCard
+                        title="Умный архив"
+                        description="Все документы в одном месте: история версий, поиск, фильтры и быстрый доступ."
+                        primaryAction={{ text: "Узнать больше" }}
+                        variant="glass"
+                        alignment="right"
+                        buttonVariant="magnetic"
+                        icon={<Sparkles className="h-6 w-6" />}
+                        className="border-glow-purple"
+                      />
+                    </ScrollAnimation>
+                  </div>
+                </div>
+              </TabsContent>
+
+              {/* Analytics Tab */}
+              <TabsContent value="analytics" className="space-y-12">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-medium tracking-tight text-center">Аналитика и контроль</h3>
+                  <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+                    Наглядные метрики эффективности документооборота вашей компании в реальном времени
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <ScrollAnimation type="slide" direction="up" delay={0.1}>
+                      <ProgressCard
+                        title="Скорость обработки документов"
+                        description="Среднее время нормоконтроля одного документа"
+                        progress={92}
+                        total={100}
+                        status="success"
+                        showPercentage
+                        variant="default"
+                        icon={<Clock className="h-6 w-6" />}
+                        className="border-glow-red"
+                      />
+                    </ScrollAnimation>
+
+                    <ScrollAnimation type="slide" direction="up" delay={0.2}>
+                      <ProgressCard
+                        title="Согласовано в срок"
+                        description="Документы, прошедшие согласование без просрочки"
+                        progress={88}
                         total={100}
                         status="success"
                         showPercentage
@@ -287,36 +206,36 @@ export function ComponentLibraryShowcase() {
                         variant="gradient"
                         progressColor="bg-gradient-to-r from-red-500 to-red-700"
                         icon={<CheckCircle className="h-6 w-6" />}
-                        className="border-glow-blue"
+                        className="border-glow-green"
                       />
                     </ScrollAnimation>
 
                     <ScrollAnimation type="slide" direction="up" delay={0.3}>
                       <ProgressCard
-                        title="Использование хранилища"
-                        description="Вы приближаетесь к лимиту хранилища."
-                        progress={85}
-                        total={100}
-                        status="warning"
-                        showPercentage
+                        title="Активные пользователи"
+                        description="Из 25 сотрудников проектного отдела"
+                        progress={22}
+                        total={25}
+                        status="default"
+                        showFraction
                         variant="outlined"
-                        icon={<Palette className="h-6 w-6" />}
-                        className="border-glow-purple"
+                        icon={<Users className="h-6 w-6" />}
+                        className="border-glow-blue"
                       />
                     </ScrollAnimation>
 
                     <ScrollAnimation type="slide" direction="up" delay={0.4}>
                       <ProgressCard
-                        title="Прогресс обучения"
-                        description="Отслеживайте прохождение курса."
-                        progress={30}
-                        total={100}
-                        status="info"
+                        title="Выявлено нарушений стандартов"
+                        description="Автоматически исправлено до отправки"
+                        progress={143}
+                        total={143}
+                        status="success"
                         showFraction
                         variant="glass"
-                        progressColor="bg-blue-500"
-                        icon={<BookOpen className="h-6 w-6" />}
-                        className="border-glow-green"
+                        progressColor="bg-green-500"
+                        icon={<Rocket className="h-6 w-6" />}
+                        className="border-glow-purple"
                       />
                     </ScrollAnimation>
                   </div>
@@ -329,15 +248,13 @@ export function ComponentLibraryShowcase() {
                       borderWidth={1}
                       duration={6}
                     >
-                      <PrimaryButton
-                        size="lg"
-                        className="bg-background border-0 text-foreground hover:text-white px-6 py-2.5"
+                      <a
+                        href="#pricing"
+                        className="inline-flex items-center bg-background border-0 text-foreground hover:text-white px-6 py-2.5 text-sm font-medium"
                       >
-                        <span className="flex items-center">
-                          Вся библиотека
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </span>
-                      </PrimaryButton>
+                        Запросить демо
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
                     </AnimatedGradientBorder>
                   </ScrollAnimation>
                 </div>

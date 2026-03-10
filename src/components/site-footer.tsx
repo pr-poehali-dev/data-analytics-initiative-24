@@ -9,11 +9,10 @@ export function SiteFooter() {
           <div className="flex flex-1 flex-col gap-4">
             <a href="/" className="flex items-center gap-2">
               <Icons.logo className="h-6 w-6" />
-              <span className="font-heading text-xl tracking-tight">PixelForge</span>
+              <span className="font-heading text-xl tracking-tight">QWERTEX</span>
             </a>
             <p className="text-muted-foreground max-w-sm opacity-70">
-              Современная библиотека UI-компонентов на базе shadcn/ui и Aceternity UI для веб-разработчиков и дизайнеров
-              в сфере AI-софта.
+              IT-компания, специализирующаяся на разработке продуктов для автоматизации документооборота и нормоконтроля.
             </p>
             <div className="flex gap-4">
               <a href="https://twitter.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
@@ -32,14 +31,14 @@ export function SiteFooter() {
           </div>
           <div className="grid flex-1 grid-cols-2 gap-10 sm:grid-cols-3">
             <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Продукт</h3>
+              <h3 className="text-sm font-medium tracking-tight">Продукты</h3>
               <ul className="flex flex-col gap-2">
                 <li>
                   <a
                     href="#features"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Функции
+                    Возможности
                   </a>
                 </li>
                 <li>
@@ -47,7 +46,7 @@ export function SiteFooter() {
                     href="#pricing"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Цены
+                    Тарифы
                   </a>
                 </li>
                 <li>
@@ -55,15 +54,15 @@ export function SiteFooter() {
                     href="#components"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Компоненты
+                    Решения
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#changelog"
+                    href="#faq"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Изменения
+                    FAQ
                   </a>
                 </li>
               </ul>
@@ -146,7 +145,7 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="text-sm text-muted-foreground opacity-70">
-            &copy; {new Date().getFullYear()} PixelForge. Все права защищены.
+            &copy; {new Date().getFullYear()} QWERTEX. Все права защищены.
           </p>
           <div className="flex gap-4">
             <a

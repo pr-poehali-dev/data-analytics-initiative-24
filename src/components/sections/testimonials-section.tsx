@@ -8,25 +8,25 @@ import { AnimatedBackground } from "@/components/ui/animated-background"
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Алексей Иванов",
-      role: "Frontend-разработчик",
+      name: "Андрей Соколов",
+      role: "Главный инженер, АО «ПромСтройПроект»",
       content:
-        "Эта библиотека сэкономила мне кучу времени на разработку. Компоненты красиво оформлены и легко настраиваются.",
-      avatar: "АИ",
+        "Раньше нормоконтроль одного комплекта занимал 2–3 дня. С QWERTEX — несколько часов. Система сама находит несоответствия, которые мы раньше пропускали.",
+      avatar: "АС",
     },
     {
-      name: "Мария Петрова",
-      role: "UI/UX-дизайнер",
+      name: "Елена Захарова",
+      role: "Руководитель проектного отдела, ГК «Стройкомплекс»",
       content:
-        "Как дизайнер, я ценю внимание к деталям в этих компонентах. Они не только функциональны, но и эстетичны.",
-      avatar: "МП",
+        "Внедрили продукт за неделю, обучение минимальное. Теперь все документы в порядке, согласования проходят вдвое быстрее.",
+      avatar: "ЕЗ",
     },
     {
-      name: "Дмитрий Козлов",
-      role: "Продакт-менеджер",
+      name: "Игорь Тихонов",
+      role: "IT-директор, «МашПром Групп»",
       content:
-        "Продуктивность нашей команды значительно выросла с этой библиотекой. Документация отличная, компоненты надежные.",
-      avatar: "ДК",
+        "Интеграция с нашей ERP прошла без проблем. Поддержка QWERTEX всегда на связи — редкость для IT-поставщиков.",
+      avatar: "ИТ",
     },
   ]
 
@@ -39,13 +39,13 @@ export function TestimonialsSection() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <AnimatedText
-                text="Отзывы пользователей"
+                text="Что говорят наши клиенты"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl"
                 animation="slide"
               />
               <AnimatedText
-                text="Узнайте, что говорят разработчики и дизайнеры, использующие нашу библиотеку."
+                text="Компании из разных отраслей уже автоматизировали документооборот с помощью QWERTEX."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
